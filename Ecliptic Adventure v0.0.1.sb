@@ -1,0 +1,50 @@
+' Ecliptic Adventure '
+' Developed by Gabe@crypticnode.host '
+' For support use our github '
+' Fork us on github! '
+
+' This is the startup menu '
+homemenu:
+TextWindow.Clear()
+TextWindow.ForegroundColor = "Red"
+TextWindow.WriteLine(" _____     _ _     _   _        _____   _             _               ")
+TextWindow.WriteLine("|   __|___| |_|___| |_|_|___   |  _  |_| |_ _ ___ ___| |_ _ _ ___ ___ ")
+TextWindow.WriteLine("|   __|  _| | | . |  _| |  _|  |     | . | | | -_|   |  _| | |  _| -_|")
+TextWindow.WriteLine("|_____|___|_|_|  _|_| |_|___|  |__|__|___|\_/|___|_|_|_| |___|_| |___|")
+TextWindow.WriteLine("              |_|                                                     ")
+TextWindow.WriteLine("Developed by Gabe Oliver")
+TextWindow.ForegroundColor = "White"
+' When an error occurs during the typing faze they will go here: '
+homemenuoptions:
+TextWindow.WriteLine("Type 'play' to start the game.")
+TextWindow.WriteLine("Type 'exit' to leave the game.")
+input1 = TextWindow.Read()
+If input1 = "play" then
+  Goto playgame
+ElseIf input1 = "Play" then
+  Goto playgame
+elseif input1 = "exit" then
+  Program.End()
+elseif input1 = "Exit" then
+  Program.End()
+Else
+  TextWindow.WriteLine("Couldn't complete that task! Please try again!")
+  Goto homemenuoptions
+endif
+Program.Delay(155555)
+Goto homemenu
+
+' This is the actual start of the game. '
+playgame:
+TextWindow.Clear()
+TextWindow.ForegroundColor = "Red"
+TextWindow.WriteLine(" _____       _   _")                 
+TextWindow.WriteLine("|  _  |     | | (_)")                
+TextWindow.WriteLine("| | | |_ __ | |_ _  ___  _ __  ___ ")
+TextWindow.WriteLine("| | | |  _ \| __| |/ _ \| _ \ / __|")
+TextWindow.WriteLine("\ \_/ / |_) | |_| | (_) | | | \__ \")
+TextWindow.WriteLine(" \___/| .__/ \__|_|\___/|_| |_|___/")
+TextWindow.WriteLine("      | |                          ")
+TextWindow.WriteLine("      |_|                          ")
+TextWindow.WriteLine("")
+TextWindow.WriteLine("You will know it is me because I am typing in red.")
