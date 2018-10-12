@@ -31,7 +31,6 @@ Else
   TextWindow.WriteLine("Couldn't complete that task! Please try again!")
   Goto homemenuoptions
 endif
-Program.Delay(155555)
 Goto homemenu
 
 ' This is the actual start of the game. '
@@ -47,4 +46,25 @@ TextWindow.WriteLine(" \___/| .__/ \__|_|\___/|_| |_|___/")
 TextWindow.WriteLine("      | |                          ")
 TextWindow.WriteLine("      |_|                          ")
 TextWindow.WriteLine("")
-TextWindow.WriteLine("You will know it is me because I am typing in red.")
+TextWindow.WriteLine("Please choose type you are trying to do: {NOTE: Case sensitive}")
+TextWindow.WriteLine("Tutorial [Recommended for Beginners] - brings you to tutorial")
+TextWindow.WriteLine("Play - to skip tutorial.")
+TextWindow.WriteLine("Exit - to go to main menu.")
+input1 = TextWindow.Read()
+if input1 = "Tutorial" then
+ Goto tutorial
+elseif input1 = "tutorial" then
+ Goto tutorial
+elseif input1 = "Play" then
+ Goto skiptutorial
+elseif input1 = "play" then
+ Goto skiptutorial
+else
+ TextWindow.WriteLine("Whoops, looks like something went wrong. Exit code: #412")
+endif
+
+tutorial:
+TextWindow.WriteLine("You can't expect us to finish this game in a couple of days.")
+
+skiptutorial:
+TextWindow.WriteLine("You can't expect us to finish this game in a couple of days.")
