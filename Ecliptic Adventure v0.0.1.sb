@@ -47,9 +47,10 @@ TextWindow.WriteLine("      | |                          ")
 TextWindow.WriteLine("      |_|                          ")
 TextWindow.WriteLine("")
 TextWindow.WriteLine("Please choose type you are trying to do: {NOTE: Case sensitive}")
-TextWindow.WriteLine("Tutorial [Recommended for Beginners] - brings you to tutorial")
-TextWindow.WriteLine("Play - to skip tutorial.")
-TextWindow.WriteLine("Exit - to go to main menu.")
+TextWindow.ForegroundColor = "White"
+TextWindow.WriteLine("'tutorial' [Recommended for Beginners] - brings you to tutorial")
+TextWindow.WriteLine("'play'- to skip tutorial.")
+TextWindow.WriteLine("'exit' - to go to main menu.")
 input1 = TextWindow.Read()
 if input1 = "Tutorial" then
  Goto tutorial
@@ -65,6 +66,8 @@ endif
 
 tutorial:
 TextWindow.WriteLine("You can't expect us to finish this game in a couple of days.")
+Goto tutorial
 
 skiptutorial:
 TextWindow.WriteLine("You can't expect us to finish this game in a couple of days.")
+Goto tutorial
